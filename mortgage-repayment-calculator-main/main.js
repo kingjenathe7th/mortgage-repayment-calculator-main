@@ -99,8 +99,8 @@ function calculateMortgage() {
         };
 
         // Displays the calculation results
-        document.querySelector('.monthly-results').innerText = `$${monthlyPayment.toFixed(2)}`;
-        document.querySelector('.term-result').innerText = `$${monthlyPayment.toFixed(2)}`;
+        document.querySelector('.monthly-results').innerText = `$${monthlyPayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        document.querySelector('.term-result').innerText = `$${totalRepayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
     } else {
         // Clears the calculation results if inputs are invalid
